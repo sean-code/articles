@@ -1,5 +1,5 @@
 class Author
-  attr_accessor :name
+  attr_accessor :name, :magazine, :title
 
   def initialize(name)
     @name = name
@@ -15,6 +15,10 @@ class Author
     articles.select do |article|
      article.magazine.
     end.uniq
+  end
+
+  def add_article(magazine:, title:)
+    Article.new(magazine, title)
   end
   
 end
