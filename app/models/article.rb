@@ -1,6 +1,6 @@
 class Article
 
-    attr_accessor :author, :magazine, :title
+    attr_reader :author, :magazine, :title
 
     @@all = []
 
@@ -9,7 +9,6 @@ class Article
         @magazine = magazine
         @title = title
     end
-
 
     def self.all 
         @@all
