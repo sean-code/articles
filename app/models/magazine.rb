@@ -13,10 +13,18 @@ class Magazine
     @@all << self
   end
 
+  def contributors
+    Article.all.filter do |magz|
+      magz.magazine == self
+    end.collect do |m|
+      m.author
+    end
+  end
+
 end
 
-mag = Magazine.new(name: 'Shujaaz', category: 'Comic')
+# mag = Magazine.new(name: 'Shujaaz', category: 'Comic')
 
-puts mag.name
-puts mag.category
+# puts mag.name
+# puts mag.category
 
