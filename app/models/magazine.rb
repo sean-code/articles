@@ -25,6 +25,14 @@ class Magazine
     self.all.find {magazine.name == name}
   end
 
+  def article_titles
+    Article.all.filter do |magazine|
+      magazine.magazine == self
+    end.collect do |article|
+      article.title
+    end
+  end
+
 end
 
 # mag = Magazine.new(name: 'Shujaaz', category: 'Comic')
