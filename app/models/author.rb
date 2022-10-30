@@ -10,6 +10,12 @@ class Author
       article.author == self
     end
   end
+
+  def magazines 
+    articles.select do |article|
+     article.magazine.
+    end.uniq
+  end
   
 end
 
