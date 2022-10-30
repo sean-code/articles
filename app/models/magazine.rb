@@ -21,6 +21,10 @@ class Magazine
     end
   end
 
+  def find_by_name(name)
+    self.all.find {magazine.name == name}
+  end
+
 end
 
 # mag = Magazine.new(name: 'Shujaaz', category: 'Comic')
